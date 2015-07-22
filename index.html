@@ -30,9 +30,7 @@
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
 	  
-	  <div class="load">
-		  <i class="fa fa-circle-o-notch fa-spin"></i>
-	  </div>
+	  
 	  
 	  <div class="container-fluid">
 		  <div class="row">
@@ -69,10 +67,11 @@
 			  
 			  <!--WRAPPER -->
 				<div class="wrapper">	  
-				   <div class="load">
-		  
-	  				</div>
-				  
+				
+					<div class="load">
+						<i class="fa fa-cog fa-spin fa-lg"></i>
+		  			</div>
+				
 				  <div class="owl-carousel">
 
 					<div class="slider-lg item" style="background:url('http://www.ind.cl/wp-content/uploads/2015/07/Tenis-Toronto-2015-julio.jpg'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-position: center center;">
@@ -319,22 +318,17 @@
     <script>
 	    
 	    $(window).load(function(){
-/*
 			$(".load").css({bottom:0});   
-			$(".load").animate({left:'100%'}, {duration: 1000,easing: 'easeOutQuad'}, function(){
-				$('.load').fadeOut('fast');
-			});
-*/
-			
-			
-		    
+			$(".load").delay(1000).slideUp({duration: 300,easing: 'easeOutQuad'});
 		    $('#column-width-demo2').animate({opacity:1},200);
+			$('.contenedor-menu').animate({opacity:1},200);	
+		    
 		        var $container = $('#column-width-demo2');
 				// init
 				$container.packery({
 				  itemSelector: '.item'
 				});
-				$('.contenedor-menu').animate({opacity:1},200);	
+				
 				
 				var wow = new WOW(
 				  {

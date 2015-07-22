@@ -67,7 +67,13 @@ body{
 	z-index: 999999;
 	margin-left: 12.5%;
 	width: 87.5%;
-	color: white;
+	color: $rojo;
+	padding: 20px;
+	@media (max-width:1024px){
+		width: 100%;
+		margin-left: 0;
+	}
+	
 }
 
 .gradient{
@@ -121,7 +127,12 @@ body{
 					width: 120% !important;
 				}
 			}
-		}		
+		}
+		
+		@media(max-width:1024px){
+			padding-bottom: 0;
+		}
+				
 		&::-webkit-scrollbar { 
 	    display: none; 
 		}
@@ -535,6 +546,9 @@ section.actividades{
 			width: 100%;
 			background: $rojo;
 			@include transition(all .2s ease-out);
+			@media(max-width:1024px){
+				height: 300px !important;
+			}	
 		}
 		
 		.info{
@@ -545,7 +559,14 @@ section.actividades{
 			min-height: 280px;
 			max-height: 280px;
 // 			box-shadow: 0px 0px 30px rgba(0,0,0,.1);
-
+			@media(max-width:1024px){
+				min-height: 230px;
+				max-height: 230px;
+			}
+			@media(max-width:320px){
+				min-height: 250px;
+				max-height: 250px;
+			}
 
 			small{
 				text-transform: uppercase;
@@ -603,6 +624,7 @@ section.actividades{
 			width: 48%;
 			float: left;
 			margin: 0.5%;
+			height: 250px;
 		}
 	small{
 		color: white !important;
@@ -636,6 +658,7 @@ section.actividades{
 			width: 48%;
 			float: left;
 			margin: 0.5%;
+			height: 250px;
 		}
 	.titulo{
 		padding: 20px;
